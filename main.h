@@ -28,6 +28,7 @@ char *_strdup(char *str);
 char *convert_base_pointer(unsigned long p);
 int get_width(const char *format, int *i, va_list list);
 int is_digit(char);
+int get_flags(const char *format, int *i);
 
 /**
  * struct flags_printf - struct conversion to function
