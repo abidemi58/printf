@@ -1,17 +1,17 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
 
 /**
  * print_str_unprintable - unprint some characters
- * @ap: arg list
+ * @args: arg list
  * Return: number of printed char
  */
 
-int print_str_unprintable(va_list ap)
+int print_str_unprintable(va_list args)
 {
-	char *argument = va_arg(ap, char *);
+	char *argument = va_arg(args, char *);
 	int sum = 0;
 
 	if (!argument)
@@ -25,12 +25,12 @@ int print_str_unprintable(va_list ap)
 
 /**
  * print_str_reverse - reverse a string
- * @ap: arg list
+ * @args: arg list
  * Return: number printed char
  */
-int print_str_reverse(va_list ap)
+int print_str_reverse(va_list args)
 {
-	char *argument = va_arg(ap, char *), *str;
+	char *argument = va_arg(args, char *), *str;
 	int size, left, limit, right, sum = 0;
 
 	if (!argument)
@@ -72,14 +72,14 @@ int print_str_reverse(va_list ap)
 
 /**
  * print_rot13 - print string with rot13
- * @ap: arg list
+ * @args: arg list
  * Return: number of printed char
  */
 
-int print_rot13(va_list ap)
+int print_rot13(va_list args)
 {
 	int sum = 0;
-	char *str, *argument = va_arg(ap, char*);
+	char *str, *argument = va_arg(args, char*);
 
 	if (!argument)
 	{
