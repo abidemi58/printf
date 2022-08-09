@@ -1,17 +1,5 @@
-#include <unistd.h>
 #include <stdlib.h>
-#include "holberton.h"
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- * Return: number of printed char
- */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+#include "main.h"
 
 /**
  * _puts - write all char from string to stdout
