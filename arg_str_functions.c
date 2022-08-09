@@ -4,6 +4,22 @@
 #include <unistd.h>
 
 /**
+ * print_char - print single char
+ * @args: arg list
+ * Return: number of printed char
+ */
+
+int print_char(va_list args)
+{
+	char c = va_arg(a, int);
+
+	if (c == '\0')
+	{
+		return (write(1, &c, 1));
+	}
+	_putchar(c);
+	return (1);
+}/**
  * print_str_unprintable - unprint some characters
  * @args: arg list
  * Return: number of printed char
