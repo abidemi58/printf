@@ -98,3 +98,28 @@ int print_i(va_list args)
 {
 	return (print_d(args));
 }
+
+/**
+ * print_binary - print number binary base
+ * @ap: arg list
+ * Return: number of printed char
+ */
+
+int print_binary(va_list ap)
+{
+	char *str;
+	int sum = 0;
+	unsigned int argument = va_arg(ap, unsigned int);
+
+	if (!argument)
+	{
+		sum += _puts("0", 0);
+		return (sum);
+	}
+	str = convert_base(argument, 2, 0);
+	if (!str)
+		return (0);
+	sum = _puts(str, 0);
+	free(str);
+	return (sum);
+}
