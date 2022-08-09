@@ -123,3 +123,14 @@ int print_binary(va_list args)
 	free(str);
 	return (sum);
 }
+
+/**
+ * print_nbr - print number
+ * @ap: arg list
+ * Return: number of printed char
+ */
+
+int print_nbr(va_list args)
+{
+	return (print_number(va_arg(args, int)));
+}
