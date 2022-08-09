@@ -101,7 +101,7 @@ int print_i(va_list args)
 
 /**
  * print_binary - print number binary base
- * @ap: arg list
+ * @args: arg list
  * Return: number of printed char
  */
 
@@ -126,7 +126,7 @@ int print_binary(va_list args)
 
 /**
  * print_nbr - print number
- * @ap: arg list
+ * @args: arg list
  * Return: number of printed char
  */
 
@@ -137,7 +137,7 @@ int print_nbr(va_list args)
 
 /**
  * print_octal - print number octal base
- * @ap: arg list
+ * @args: arg list
  * Return: number of printed char
  */
 
@@ -154,7 +154,7 @@ int print_octal(va_list args)
 
 /**
  * print_hexa_lower - print hexa lower
- * @ap: arg list
+ * @args: arg list
  * Return: number of printed char
  */
 
@@ -171,7 +171,7 @@ int print_hexa_lower(va_list args)
 
 /**
  * print_hexa_upper - print hexa upper
- * @ap: arg list
+ * @args: arg list
  * Return: number of printed char
  */
 
