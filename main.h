@@ -2,31 +2,6 @@
 #define MAIN_H
 #include <stdarg.h>
 
-
-/* Flag Modifier Macros */
-#define PLUS 1
-#define SPACE 2
-#define HASH 4
-#define ZERO 8
-#define NEG 16
-#define PLUS_FLAG (flags & 1)
-#define SPACE_FLAG ((flags >> 1) & 1)
-#define HASH_FLAG ((flags >> 2) & 1)
-#define ZERO_FLAG ((flags >> 3) & 1)
-#define NEG_FLAG ((flags >> 4) & 1)
-
-/* Length Modifier Macros */
-#define SHORT 1
-#define LONG 2
-
-/* Handlers */
-unsigned char handle_flags(const char *flags, char *index);
-unsigned char handle_length(const char *modifier, char *index);
-int handle_width(va_list args, const char *modifier, char *index);
-int handle_precision(va_list args, const char *modifier, char *index);
-unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
-		unsigned char, int, int, unsigned char);
-
 int _printf(const char *format, ...);
 int print_char(va_list ap);
 int print_str(va_list ap);
