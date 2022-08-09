@@ -105,11 +105,11 @@ int print_i(va_list args)
  * Return: number of printed char
  */
 
-int print_binary(va_list ap)
+int print_binary(va_list args)
 {
 	char *str;
 	int sum = 0;
-	unsigned int argument = va_arg(ap, unsigned int);
+	unsigned int argument = va_arg(args, unsigned int);
 
 	if (!argument)
 	{
