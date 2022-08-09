@@ -26,6 +26,8 @@ char *convert_rot13(char *str);
 char *convert_base(unsigned long nb, unsigned int base, int upper);
 char *_strdup(char *str);
 char *convert_base_pointer(unsigned long p);
+int get_width(const char *format, int *i, va_list list);
+int is_digit(char);
 
 /**
  * struct flags_printf - struct conversion to function
