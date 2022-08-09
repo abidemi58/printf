@@ -168,3 +168,20 @@ int print_hexa_lower(va_list args)
 	free(str);
 	return (sum);
 }
+
+/**
+ * print_hexa_upper - print hexa upper
+ * @ap: arg list
+ * Return: number of printed char
+ */
+
+int print_hexa_upper(va_list args)
+{
+	char *str;
+	int sum;
+
+	str = convert_base(va_arg(args, unsigned int), 16, 1);
+	sum = _puts(str, 0);
+	free(str);
+	return (sum);
+}
