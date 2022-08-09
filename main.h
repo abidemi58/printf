@@ -23,13 +23,11 @@ int _puts(char *str, int ascii);
 int _nbr_len(int prmNumber);
 int _strlen_recursion(char *s);
 int convert_alpha_numeric(int nb, int upper);
+int get_flag(char s, flags_p *c);
 char *convert_rot13(char *str);
 char *convert_base(unsigned long nb, unsigned int base, int upper);
 char *_strdup(char *str);
 char *convert_base_pointer(unsigned long p);
-int get_width(const char *format, int *i, va_list list);
-int is_digit(char);
-int get_flags(const char *format, int *i);
 
 /**
  * struct flags_printf - struct conversion to function
