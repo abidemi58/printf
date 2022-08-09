@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdlib.h>
-#include <unistd.h>
+
 
 /**
  * print_char - print single char
