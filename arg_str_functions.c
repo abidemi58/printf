@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdlib.h>
-#include <unistd.h>
+
 
 /**
  * print_str_unprintable - unprint some characters
