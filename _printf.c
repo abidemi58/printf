@@ -1,6 +1,4 @@
 #include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 #include <stddef.h>
 /**
@@ -10,43 +8,40 @@
  */
 int _printf(const char *format, ...)
 {
-	if (format != NULL)
-	{
-		int count = 0, i;
-		int (*m)(va_list);
-		va_list args;
+	va_list args;
+	int sum = 0, i = 0;
+	int (*func)();
 
-		va_start(args, format);
-		i = 0;
-		if (format[0] == '%' && format[1] == '\0')
-			return (-1);
-		while (format != NULL && format[i] != '\0')
+	if (!format || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+	va_start(args, format);
+
+	while (format[i])
+	{
+		if (format[i] == '%')
 		{
-			if (format[i] == '%')
+			if (format[i + 1] != '\0')
+				func = get_op(format[i + 1]);
+			if (func == NULL)
 			{
-				if (format[i + 1] == '%')
-				{
-					count += _putchar(format[i]);
-					i += 2;
-				}
-				else
-				{
-					m = get_func(format[i + 1]);
-					if (m)
-						count += m(args);
-					else
-						count = _putchar(format[i]) + _putchar(format[i + 1]);
-					i += 2;
-				}
+				_putchar(format[i]);
+				sum++;
+				i++;
 			}
 			else
 			{
-				count += _putchar(format[i]);
-				i++;
+				sum += func(args);
+				i += 2;
+				continue;
 			}
 		}
-		va_end(args);
-		return (count);
+		else
+		{
+			_putchar(format[i]);
+			sum++;
+			i++;
+		}
 	}
-	return (-1);
+	va_end(args);
+	return (sum);
 }
