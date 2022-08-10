@@ -23,8 +23,6 @@ int _puts(char *str, int ascii);
 int _nbr_len(int prmNumber);
 int _strlen_recursion(char *s);
 int convert_alpha_numeric(int nb, int upper);
-int get_flags(const char *format, int *i);
-int get_precision(const char *format, int *i, va_list ap);
 char *convert_rot13(char *str);
 char *convert_base(unsigned long nb, unsigned int base, int upper);
 char *_strdup(char *str);
