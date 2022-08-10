@@ -1,8 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-#define SHORT 2
-#define LONG 1
 
 int _printf(const char *format, ...);
 int print_char(va_list ap);
@@ -29,6 +27,7 @@ char *convert_rot13(char *str);
 char *convert_base(unsigned long nb, unsigned int base, int upper);
 char *_strdup(char *str);
 char *convert_base_pointer(unsigned long p);
+int printf_unsigned(va_list ap);
 /**
  * struct flags_printf - struct conversion to function
  * @c: flag string
