@@ -29,8 +29,6 @@ char *convert_rot13(char *str);
 char *convert_base(unsigned long nb, unsigned int base, int upper);
 char *_strdup(char *str);
 char *convert_base_pointer(unsigned long p);
-int format_specifier(int, const char *, va_list, int *,
-		int *, int *, int *, int *);
 /**
  * struct flags_printf - struct conversion to function
  * @c: flag string
